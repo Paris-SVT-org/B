@@ -1,0 +1,15 @@
+<server description="microwebapp">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>microProfile-3.2</feature>
+        <feature>jsp-2.3</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+        host="*"
+        httpPort="9080"
+        httpsPort="9443" />
+
+    <webApplication location="C:/Users/BrianHanczaryk/git/microwebapp/target/microwebapp.war" name="microwebapp" contextRoot="/microwebapp" />
+</server>

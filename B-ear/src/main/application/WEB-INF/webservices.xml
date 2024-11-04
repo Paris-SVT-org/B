@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webservices PUBLIC "-//IBM Corporation, Inc.//DTD J2EE Web services 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_web_services_1_0.dtd">
+
+   <webservices id="WebServices_1114576392031">
+      <webservice-description id="WebServiceDescription_1114576392031">
+         <webservice-description-name>RemoteClockServiceService</webservice-description-name>
+         <wsdl-file>WEB-INF/wsdl/RemoteClockService.wsdl</wsdl-file>
+         <jaxrpc-mapping-file>WEB-INF/RemoteClockService_mapping.xml</jaxrpc-mapping-file>
+         <port-component id="PortComponent_1114576392031">
+            <port-component-name>RemoteClockService</port-component-name>
+            <wsdl-port id="WSDLPort_1114576392031">
+               <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+               <localpart>RemoteClockService</localpart>
+            </wsdl-port>
+            <service-endpoint-interface>com.ibm.ws.classify.test.RemoteClockService</service-endpoint-interface>
+            <service-impl-bean id="ServiceImplBean_1114576392031">
+               <servlet-link>com_ibm_ws_classify_test_RemoteClockService</servlet-link>
+            </service-impl-bean>
+         </port-component>
+      </webservice-description>
+      <webservice-description id="WebServiceDescription_1114579499015">
+         <webservice-description-name>RemoteTimeZoneServiceService</webservice-description-name>
+         <wsdl-file>WEB-INF/wsdl/RemoteTimeZoneService.wsdl</wsdl-file>
+         <jaxrpc-mapping-file>WEB-INF/RemoteTimeZoneService_mapping.xml</jaxrpc-mapping-file>
+         <port-component id="PortComponent_1114579499015">
+            <port-component-name>RemoteTimeZoneService</port-component-name>
+            <wsdl-port id="WSDLPort_1114579499015">
+               <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+               <localpart>RemoteTimeZoneService</localpart>
+            </wsdl-port>
+            <service-endpoint-interface>com.ibm.ws.classify.test.RemoteTimeZoneService</service-endpoint-interface>
+            <service-impl-bean id="ServiceImplBean_1114579499015">
+               <servlet-link>com_ibm_ws_classify_test_RemoteTimeZoneService</servlet-link>
+            </service-impl-bean>
+         </port-component>
+      </webservice-description>
+   </webservices>

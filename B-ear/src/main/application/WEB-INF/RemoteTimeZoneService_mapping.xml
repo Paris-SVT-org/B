@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE java-wsdl-mapping PUBLIC "-//IBM Corporation, Inc.//DTD J2EE JAX-RPC mapping 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_jaxrpc_mapping_1_0.dtd">
+
+   <java-wsdl-mapping id="JavaWSDLMapping_1114579498500">
+      <package-mapping id="PackageMapping_1114579498500">
+         <package-type>com.ibm.ws.classify.test</package-type>
+         <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+      </package-mapping>
+      <java-xml-type-mapping id="JavaXMLTypeMapping_1114579498500">
+         <class-type>java.lang.String</class-type>
+         <root-type-qname id="RootTypeQname_1114579498500">
+            <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+            <localpart>string</localpart>
+         </root-type-qname>
+         <qname-scope>simpleType</qname-scope>
+      </java-xml-type-mapping>
+      <service-interface-mapping id="ServiceInterfaceMapping_1114579498500">
+         <service-interface>com.ibm.ws.classify.test.RemoteTimeZoneServiceService</service-interface>
+         <wsdl-service-name id="WSDLServiceName_1114579498500">
+            <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+            <localpart>RemoteTimeZoneServiceService</localpart>
+         </wsdl-service-name>
+         <port-mapping id="PortMapping_1114579498500">
+            <port-name>RemoteTimeZoneService</port-name>
+            <java-port-name>RemoteTimeZoneService</java-port-name>
+         </port-mapping>
+      </service-interface-mapping>
+      <service-endpoint-interface-mapping id="ServiceEndpointInterfaceMapping_1114579498500">
+         <service-endpoint-interface>com.ibm.ws.classify.test.RemoteTimeZoneService</service-endpoint-interface>
+         <wsdl-port-type id="WSDLPortType_1114579498500">
+            <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+            <localpart>RemoteTimeZoneService</localpart>
+         </wsdl-port-type>
+         <wsdl-binding id="WSDLBinding_1114579498500">
+            <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+            <localpart>RemoteTimeZoneServiceSoapBinding</localpart>
+         </wsdl-binding>
+         <service-endpoint-method-mapping id="ServiceEndpointMethodMapping_1114579498500">
+            <java-method-name>getClock</java-method-name>
+            <wsdl-operation>getClock</wsdl-operation>
+            <wrapped-element></wrapped-element>
+            <wsdl-return-value-mapping id="WSDLReturnValueMapping_1114579498500">
+               <method-return-value>java.lang.String</method-return-value>
+               <wsdl-message id="WSDLMessage_1114579498500">
+                  <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+                  <localpart>getClockResponse</localpart>
+               </wsdl-message>
+               <wsdl-message-part-name>getClockReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+         </service-endpoint-method-mapping>
+         <service-endpoint-method-mapping id="ServiceEndpointMethodMapping_1114579498501">
+            <java-method-name>getTimeZone</java-method-name>
+            <wsdl-operation>getTimeZone</wsdl-operation>
+            <wrapped-element></wrapped-element>
+            <wsdl-return-value-mapping id="WSDLReturnValueMapping_1114579498501">
+               <method-return-value>java.lang.String</method-return-value>
+               <wsdl-message id="WSDLMessage_1114579498501">
+                  <namespaceURI>http://test.classify.ws.ibm.com</namespaceURI>
+                  <localpart>getTimeZoneResponse</localpart>
+               </wsdl-message>
+               <wsdl-message-part-name>getTimeZoneReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+         </service-endpoint-method-mapping>
+         <service-endpoint-method-mapping id="ServiceEndpointMethodMapping_1114579498502">
+            <java-method-name>getTimeZoneForClient</java-method-name>
+            <wsdl-operation>getTimeZoneForClient</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping id="WSDLParamPartsMapping_1114579498502">
+                <param-position>0</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping id="WSDLMessageMapping_1114579498502">
+                    <wsdl-message xmlns:mppm="http://test.classify.ws.ibm.com">mppm:getTimeZoneForClientRequest</wsdl-message>
+                    <wsdl-message-part-name>arg_0_1</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping id="WSDLReturnValueMapping_1114579498502">
+                <method-return-value>java.lang.String</method-return-value>
+                <wsdl-message xmlns:wrvm="http://test.classify.ws.ibm.com">wrvm:getTimeZoneForClientResponse</wsdl-message>
+                <wsdl-message-part-name>getTimeZoneForClientReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+      </service-endpoint-interface-mapping>
+   </java-wsdl-mapping>

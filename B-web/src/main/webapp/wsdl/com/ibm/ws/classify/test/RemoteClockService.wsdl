@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://test.classify.ws.ibm.com" xmlns:impl="http://test.classify.ws.ibm.com" xmlns:intf="http://test.classify.ws.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://test.classify.ws.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://test.classify.ws.ibm.com" xmlns:intf="http://test.classify.ws.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="getServerClock">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="getServerClockResponse">
+    <complexType>
+     <sequence>
+      <element name="getServerClockReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServerTimeZone">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="getServerTimeZoneResponse">
+    <complexType>
+     <sequence>
+      <element name="getServerTimeZoneReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getServerTimeZoneResponse">
+
+      <wsdl:part element="intf:getServerTimeZoneResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServerClockResponse">
+
+      <wsdl:part element="intf:getServerClockResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServerTimeZoneRequest">
+
+      <wsdl:part element="intf:getServerTimeZone" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServerClockRequest">
+
+      <wsdl:part element="intf:getServerClock" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RemoteClockService">
+
+      <wsdl:operation name="getServerClock">
+
+         <wsdl:input message="intf:getServerClockRequest" name="getServerClockRequest"/>
+
+         <wsdl:output message="intf:getServerClockResponse" name="getServerClockResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServerTimeZone">
+
+         <wsdl:input message="intf:getServerTimeZoneRequest" name="getServerTimeZoneRequest"/>
+
+         <wsdl:output message="intf:getServerTimeZoneResponse" name="getServerTimeZoneResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RemoteClockServiceSoapBinding" type="intf:RemoteClockService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getServerClock">
+
+         <wsdlsoap:operation soapAction="/A/services/RemoteClockService/getServerClock"/>
+
+         <wsdl:input name="getServerClockRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServerClockResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServerTimeZone">
+
+         <wsdlsoap:operation soapAction="/A/services/RemoteClockService/getServerTimeZone"/>
+
+         <wsdl:input name="getServerTimeZoneRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServerTimeZoneResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RemoteClockServiceService">
+
+      <wsdl:port binding="intf:RemoteClockServiceSoapBinding" name="RemoteClockService">
+
+         <wsdlsoap:address location="http://localhost:9080/A/services/RemoteClockService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
